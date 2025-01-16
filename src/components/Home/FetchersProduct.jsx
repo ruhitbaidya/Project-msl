@@ -103,6 +103,25 @@ const FetchersProduct = () => {
                 </div>
               </div>
             </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <div className="bg-[#D9D9D9] p-[15px] rounded-lg">
+                  <img
+                    className="w-full h-[250px] object-cover"
+                    src={pImg3}
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <p className="mt-[20px] text-[#32251F] text-[20px]">
+                    Silver open socket
+                  </p>
+                  <p className="mt-[10px] text-[18px] text-[#1E1E1E80]">
+                    $250.00
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>

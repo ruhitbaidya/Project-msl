@@ -1,5 +1,5 @@
-import Buttons from "../ReuserComponents/Buttons";
-import "./slider.css";
+import Buttons from "./Buttons";
+import "../Home/slider.css";
 const Choice = () => {
   return (
     <div className="choicePg">

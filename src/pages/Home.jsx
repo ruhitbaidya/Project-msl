@@ -1,8 +1,9 @@
 import { Banner } from "../components/Home/Banner";
-import Choice from "../components/Home/Choice";
+
 import FetchersProduct from "../components/Home/FetchersProduct";
 import PopularProduct from "../components/Home/PopularProduct";
 import Review from "../components/Home/Review";
+import Choice from "../components/ReuserComponents/Choice";
 
 const Home = () => {
   return (
@@ -10,7 +11,9 @@ const Home = () => {
       <div className="container mx-auto px-[10px]">
         <Banner />
         <FetchersProduct />
-        <PopularProduct />
+      </div>
+      <PopularProduct />
+      <div className="container mx-auto px-[10px]">
         <Review />
       </div>
       <Choice />

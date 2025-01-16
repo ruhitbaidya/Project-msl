@@ -9,3 +9,8 @@
   background-size: cover;
   /* background-position: left bottom; */
 }
+
+.image-offer:hover img {
+  transform: scale(1.1) rotate(2deg); /* Zoom in and slight rotation */
+  filter: brightness(1.2) contrast(1.1); /* Enhance brightness and contrast */
+}

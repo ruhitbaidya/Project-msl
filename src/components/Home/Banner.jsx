@@ -5,6 +5,8 @@ import img1 from "../../assets/finialbgs.png";
 import offer from "../../assets/Offer.png";
 import light from "../../assets/image.png";
 import Buttons from "../ReuserComponents/Buttons";
+import charger from "../../assets/cnarger.png";
+import images2 from "../../assets/hero2.png";
 export const Banner = () => {
   return (
     <div className="">
@@ -18,7 +20,7 @@ export const Banner = () => {
                   <h1 className="text-[64px] text-white">
                     Bandon Electronics and Lighting Store
                   </h1>
-                  <p className=" mt-[20px] w-[80%] text-white">
+                  <p className=" mt-[20px] w-[60%] text-white">
                     BEALS is tailored to the needs of your seeking high-quality
                     electronics and lighting solutions.
                   </p>
@@ -27,12 +29,16 @@ export const Banner = () => {
                   </div>
                 </div>
                 <div className="w-[40%]">
-                  <div className="w-full">
-                    <div>
+                  <div className="w-full flex justify-center items-center">
+                    <div className="relative">
                       <img className="" src={light} alt="light" />
-                    </div>
-                    <div>
-                      <img className="image-full" src={offer} alt="offer" />
+                      <div className="absolute bottom-0 -left-12">
+                        <img
+                          className="image-offer image-full hover:rotate-12 transition-[0.06s]  hover:shadow-lime-300"
+                          src={offer}
+                          alt="offer"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -40,14 +46,41 @@ export const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+          <div className="">
+            <div className="relative ">
+              <img className="w-full" src={images2} alt="" />
+              <div className="flex justify-between items-center top-0 h-full px-[40px] w-full  absolute">
+                <div className="w-[60%]">
+                  <h1 className="text-[64px] text-black ">
+                    We Promise <br /> Your Choice
+                  </h1>
+                  <p className=" mt-[20px] w-[60%] text-black">
+                    BEALS is tailored to the needs of your seeking high-quality
+                    electronics and lighting solutions.
+                  </p>
+                  <div className="mt-[34px]">
+                    <Buttons text="Bye Now" />
+                  </div>
+                </div>
+                <div className="w-[40%]">
+                  <div className="w-full flex justify-center items-center">
+                    <div className="relative">
+                      <img className="" src={charger} alt="charger" />
+                      <div className="absolute bottom-0 -left-12">
+                        <img
+                          className="image-offer image-full hover:rotate-12 transition-[0.06s]  hover:shadow-lime-300"
+                          src={offer}
+                          alt="offer"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );

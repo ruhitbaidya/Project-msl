@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { CiSearch, CiUser } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import logo from "../../assets/logo.svg";
+import "./Nav.css";
 const Navbar = () => {
   return (
     <div className="container mx-auto">
@@ -57,7 +58,20 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/products">Products</NavLink>
+              <details>
+                <summary>Products</summary>
+                <ul className="w-[200px] z-10">
+                  <li>
+                    <NavLink to="/products/light">Light</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/products/tableLamp">Table Lamp</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/products/charget">Charget</NavLink>
+                  </li>
+                </ul>
+              </details>
             </li>
             <li>
               <NavLink to="/aboutus">AboutUs</NavLink>

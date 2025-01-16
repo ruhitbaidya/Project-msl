@@ -1,0 +1,10 @@
+.active {
+  color: #ff8d28 !important;
+}
+
+ul li a:hover {
+  color: #ff8d28 !important;
+  transition: 0.5s;
+  outline: none;
+  border: none;
+}
