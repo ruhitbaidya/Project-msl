@@ -8,3 +8,6 @@ ul li a:hover {
   outline: none;
   border: none;
 }
+.users:hover {
+  color: white !important;
+}

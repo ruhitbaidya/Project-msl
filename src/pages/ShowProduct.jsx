@@ -2,10 +2,12 @@ import headImage from "../assets/productHeader.png";
 import TabCom from "../components/Products/TabCom";
 import Choice from "../components/ReuserComponents/Choice";
 import Purcess from "../components/ReuserComponents/Purcess";
+import SetTitle from "../components/ReuserComponents/ReactHalmet";
 
 const ShowProduct = () => {
   return (
     <div>
+      <SetTitle title="Show Product" />
       <div className="container mx-auto px-[10px]">
         <div className="flex justify-center items-center p-[60px]">
           <div className="w-[50%]">

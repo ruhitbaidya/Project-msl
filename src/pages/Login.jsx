@@ -1,12 +1,12 @@
 import SetTitle from "../components/ReuserComponents/ReactHalmet";
 
-const Contact = () => {
+const Login = () => {
   return (
     <div>
-      <SetTitle title="Contact Us" />
-      Contact
+      <SetTitle title="Login" />
+      Login
     </div>
   );
 };
 
-export default Contact;
+export default Login;

@@ -1,5 +1,12 @@
+import SetTitle from "../components/ReuserComponents/ReactHalmet";
+
 const Faqs = () => {
-  return <div>Faqs</div>;
+  return (
+    <div>
+      <SetTitle title="FAQ " />
+      Faqs
+    </div>
+  );
 };
 
 export default Faqs;

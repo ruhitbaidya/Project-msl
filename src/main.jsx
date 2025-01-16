@@ -3,13 +3,12 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router/routers.jsx";
-import { Provider } from "react-redux";
-import { store } from "./redux/store.js";
+import UsersControl from "./usersContext/usersControl.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Provider store={store}>
+    <UsersControl>
       <RouterProvider router={router} />
-    </Provider>
+    </UsersControl>
   </StrictMode>
 );

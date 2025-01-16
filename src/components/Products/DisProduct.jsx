@@ -81,18 +81,6 @@ const DisProduct = () => {
             Smart Lighting
           </p>
         </div>
-        <div>
-          <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
-            <img
-              className="w-full h-[300px] object-contain"
-              src={img1}
-              alt=""
-            />
-          </div>
-          <p className="text-center text-[24px] text-white mt-[30px]">
-            Smart Lighting
-          </p>
-        </div>
       </div>
     </div>
   );

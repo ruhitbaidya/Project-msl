@@ -6,7 +6,7 @@ import "./Nav.css";
 const Navbar = () => {
   return (
     <div className="container mx-auto">
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 py-[20px]">
         <div className="navbar-start w-[10%]">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -85,15 +85,35 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end w-[40%]">
-          <div className="text-[30px] flex justify-between gap-[20px]">
+          <div className="text-[30px] flex justify-between items-center gap-[20px]">
             <button>
               <CiSearch />
             </button>
             <button>
-              <MdOutlineShoppingCart />
+              <div className="indicator">
+                <span className="indicator-item badge bg-[#ff8d28]"></span>
+                <div className="">
+                  <MdOutlineShoppingCart />
+                </div>
+              </div>
             </button>
             <button>
-              <CiUser />
+              <div className="dropdown dropdown-end">
+                <div tabIndex={0} role="button" className="">
+                  <CiUser />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu border-[#ff8d28] bg-base-100 rounded-box z-[10] mt-[10px] w-52 p-2 shadow text-[18px]"
+                >
+                  <li className="hover:bg-[#ff8d28] users">
+                    <NavLink to="/register">Register User</NavLink>
+                  </li>
+                  <li className="hover:bg-[#ff8d28] users">
+                    <NavLink to="/login">Login User</NavLink>
+                  </li>
+                </ul>
+              </div>
             </button>
           </div>
         </div>
