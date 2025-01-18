@@ -36,7 +36,7 @@ export const Banner = () => {
                     BEALS is tailored to the needs of your seeking high-quality
                     electronics and lighting solutions.
                   </p>
-                  <div className="mt-[34px]">
+                  <div className="lg:mt-[34px]">
                     <Buttons text="Bye Now" />
                   </div>
                 </div>
@@ -71,7 +71,7 @@ export const Banner = () => {
                     BEALS is tailored to the needs of your seeking high-quality
                     electronics and lighting solutions.
                   </p>
-                  <div className="mt-[34px]">
+                  <div className="lg:mt-[34px]">
                     <Buttons text="Bye Now" />
                   </div>
                 </div>
