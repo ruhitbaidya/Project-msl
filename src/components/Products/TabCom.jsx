@@ -8,8 +8,11 @@ const TabCom = () => {
   return (
     <div className="text-white">
       <Tabs>
-        <div className="md:hidden lg:hidden text-center bg-[#ff8d28] py-[8px] flex justify-center items-center rounded-lg mb-[10px]">
-          <button onClick={() => setTogle(!togle)} className="text-[30px]">
+        <div
+          onClick={() => setTogle(!togle)}
+          className="md:hidden lg:hidden text-center bg-[#ff8d28] py-[8px] flex justify-center items-center rounded-lg mb-[10px]"
+        >
+          <button className="text-[30px]">
             <RiMenuUnfold2Fill />
           </button>
         </div>
