@@ -9,9 +9,9 @@ const ShowProduct = () => {
     <div>
       <SetTitle title="Show Product" />
       <div className="container mx-auto px-[10px]">
-        <div className="flex justify-center items-center p-[60px]">
-          <div className="w-[50%]">
-            <h1 className="text-[64px] text-[#32251F]">
+        <div className="lg:flex justify-center items-center p-[60px]">
+          <div className="lg:w-[50%] w-[100%]">
+            <h1 className="text-[30px] lg:text-[64px] text-[#32251F]">
               Explore our Products{" "}
             </h1>
             <p className="text-[18px] text-[#1E1E1E80] mt-[30px]">
@@ -20,7 +20,7 @@ const ShowProduct = () => {
               quis!
             </p>
           </div>
-          <div className="w-[50%]">
+          <div className="lg:w-[50%] w-[100%]">
             <img src={headImage} alt="" />
           </div>
         </div>

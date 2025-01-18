@@ -8,12 +8,13 @@ import pay1 from "../../assets/Bkash.png";
 import pay2 from "../../assets/paypal.png";
 import pay3 from "../../assets/visa.png";
 import pay4 from "../../assets/mastercard.png";
+
 const Footer = () => {
   return (
     <div className="mb-[40px]">
       <div className="container mx-auto px-[10px] my-[80px]">
-        <div className="flex justify-between items-center gap-[50px]">
-          <div className="w-[30%]">
+        <div className="flex flex-wrap justify-between items-center gap-[50px] lg:flex-nowrap">
+          <div className="w-full lg:w-[30%]">
             <div>
               <img src={logo} alt="" />
             </div>
@@ -22,7 +23,7 @@ const Footer = () => {
                 We help you to find your essential products
               </p>
             </div>
-            <div className="flex  items-center gap-[30px]">
+            <div className="flex items-center gap-[30px]">
               <Link to="/">
                 <p className="w-[50px] h-[50px] border flex justify-center items-center text-[30px] gap-[20px] rounded-full">
                   <FaFacebook />
@@ -40,7 +41,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex justify-between items-center gap-[25px] w-[40%]">
+          <div className="flex flex-wrap justify-between items-center gap-[25px] w-full lg:w-[40%]">
             <div>
               <h4 className="text-[18px] text-[#32251F]">Information</h4>
               <Link className="my-[24px] block" to="/">
@@ -78,11 +79,11 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="w-[30%]">
+          <div className="w-full lg:w-[30%]">
             <h4 className="text-[18px] text-[#32251F]">Subscribe</h4>
-            <div className="my-[35px] flex  items-center">
+            <div className="my-[35px] flex items-center gap-[10px]">
               <input
-                className="py-[12px] px-[24px] bg-[#D9D9D9] rounded-tl-lg rounded-bl-lg focus:border-none focus:outline-none"
+                className="py-[12px] px-[24px] bg-[#D9D9D9] rounded-tl-lg rounded-bl-lg focus:border-none focus:outline-none w-full sm:w-auto"
                 placeholder="Enter Email"
                 type="text"
               />
@@ -90,7 +91,7 @@ const Footer = () => {
                 <FaLongArrowAltRight />
               </button>
             </div>
-            <div className="grid grid-cols-3 items-center gap-[25px]">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[25px]">
               <img src={pay1} alt="" />
               <img src={pay2} alt="" />
               <img src={pay3} alt="" />

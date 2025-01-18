@@ -13,7 +13,7 @@ const Review = () => {
     <div className="py-[50px]">
       <div className="">
         <div>
-          <h4 className="text-[#000000] text-[44px] w-[50%] mb-[20px]">
+          <h4 className="text-[#000000] text-[25px] lg:text-[44px] lg:w-[50%] mb-[20px]">
             What our customers say about BEALS?
           </h4>
         </div>
@@ -29,6 +29,11 @@ const Review = () => {
             pagination={{ clickable: true }} // Enable clickable pagination
             slidesPerView={2}
             spaceBetween={18}
+            breakpoints={{
+              320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile
+              640: { slidesPerView: 2, spaceBetween: 15 }, // Tablet
+              1024: { slidesPerView: 2, spaceBetween: 18 }, // Desktop
+            }}
           >
             <SwiperSlide>
               <div className="flex justify-between items-center gap-[25px]">
@@ -39,7 +44,7 @@ const Review = () => {
                     and how it compares to similar products on the market.”
                   </p>
                   <div>
-                    <div className="flex justify-between items-center">
+                    <div className="lg:flex justify-between items-center">
                       <div className="flex justify-between items-center gap-[25px]">
                         <div className="">
                           <img src={vactor} alt="" />
@@ -73,7 +78,7 @@ const Review = () => {
                     and how it compares to similar products on the market.”
                   </p>
                   <div>
-                    <div className="flex justify-between items-center">
+                    <div className="lg:flex justify-between items-center">
                       <div className="flex justify-between items-center gap-[25px]">
                         <div className="">
                           <img src={vactor} alt="" />
@@ -107,7 +112,7 @@ const Review = () => {
                     and how it compares to similar products on the market.”
                   </p>
                   <div>
-                    <div className="flex justify-between items-center">
+                    <div className="lg:flex justify-between items-center">
                       <div className="flex justify-between items-center gap-[25px]">
                         <div className="">
                           <img src={vactor} alt="" />

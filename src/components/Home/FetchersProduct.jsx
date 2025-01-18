@@ -37,6 +37,11 @@ const FetchersProduct = () => {
               disableOnInteraction: false, // Allow autoplay to continue after interaction
             }}
             loop={true} // Enable loop for infinite carousel effect
+            breakpoints={{
+              320: { slidesPerView: 1, spaceBetween: 10 }, // Mobile
+              640: { slidesPerView: 2, spaceBetween: 15 }, // Tablet
+              1024: { slidesPerView: 4, spaceBetween: 18 }, // Desktop
+            }}
           >
             <SwiperSlide>
               <div>
@@ -155,11 +160,13 @@ const FetchersProduct = () => {
           </Swiper>
 
           {/* Custom Navigation Buttons */}
-          <div className="swiper-button-prev">
-            <FaArrowLeft />
-          </div>
-          <div className="swiper-button-next">
-            <FaArrowRight />
+          <div className="hidden md:flex">
+            <div className="swiper-button-prev">
+              <FaArrowLeft />
+            </div>
+            <div className="swiper-button-next">
+              <FaArrowRight />
+            </div>
           </div>
         </div>
       </div>

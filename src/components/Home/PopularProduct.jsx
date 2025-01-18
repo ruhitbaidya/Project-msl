@@ -12,7 +12,7 @@ const PopularProduct = () => {
           />
         </div>
         <div className="mt-[40px]">
-          <div className="grid grid-cols-4 gap-[20px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px]">
             <div>
               <div className="bg-[#D9D9D9] p-[15px] rounded-lg mb-[20px]">
                 <img

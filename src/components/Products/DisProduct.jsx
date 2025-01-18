@@ -8,76 +8,76 @@ import img6 from "../../assets/ptab6.png";
 const DisProduct = () => {
   return (
     <div className="container mx-auto px-[10px] mt-[40px]">
-      <div className="grid grid-cols-3 gap-[25px]">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full h-[300px] object-contain"
+              className="w-full lg:h-[300px] object-contain"
               src={img1}
               alt=""
             />
           </div>
-          <p className="text-center text-[24px] text-white mt-[30px]">
+          <p className="text-center lg:text-[24px] text-white mt-[30px]">
             Smart Lighting
           </p>
         </div>
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full h-[300px] object-contain"
+              className="w-full lg:h-[300px] object-contain"
               src={img2}
               alt=""
             />
           </div>
-          <p className="text-center text-[24px] text-white mt-[30px]">
+          <p className="text-center lg:text-[24px] text-white mt-[30px]">
             Smart Lighting
           </p>
         </div>
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full h-[300px] object-contain"
+              className="w-full lg:h-[300px] object-contain"
               src={img3}
               alt=""
             />
           </div>
-          <p className="text-center text-[24px] text-white mt-[30px]">
+          <p className="text-center lg:text-[24px] text-white mt-[30px]">
             Smart Lighting
           </p>
         </div>
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full h-[300px] object-contain"
+              className="w-full lg:h-[300px] object-contain"
               src={img4}
               alt=""
             />
           </div>
-          <p className="text-center text-[24px] text-white mt-[30px]">
+          <p className="text-center lg:text-[24px] text-white mt-[30px]">
             Smart Lighting
           </p>
         </div>
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full h-[300px] object-contain"
+              className="w-full lg:h-[300px] object-contain"
               src={img5}
               alt=""
             />
           </div>
-          <p className="text-center text-[24px] text-white mt-[30px]">
+          <p className="text-center lg:text-[24px] text-white mt-[30px]">
             Smart Lighting
           </p>
         </div>
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full h-[300px] object-contain"
+              className="w-full lg:h-[300px] object-contain"
               src={img6}
               alt=""
             />
           </div>
-          <p className="text-center text-[24px] text-white mt-[30px]">
+          <p className="text-center lg:text-[24px] text-white mt-[30px]">
             Smart Lighting
           </p>
         </div>

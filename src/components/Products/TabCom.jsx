@@ -1,18 +1,32 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "./Tab.css";
 import DisProduct from "./DisProduct";
+
 const TabCom = () => {
   return (
     <div className="text-white">
       <Tabs>
-        <TabList className="flex justify-center items-center gap-[25px]">
-          <Tab>All</Tab>
-          <Tab>Switch & Socket</Tab>
-          <Tab>Power Track</Tab>
-          <Tab>Bluetooth Smart Light (TUYA)</Tab>
-          <Tab>Smart Devices (TUYA)</Tab>
-          <Tab>Powerhub Pro</Tab>
+        <TabList className="flex flex-wrap justify-center items-center gap-[25px] sm:flex-row sm:gap-[25px] sm:w-auto w-full">
+          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3 hover:bg-gray-700 rounded">
+            All
+          </Tab>
+          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3  rounded">
+            Switch & Socket
+          </Tab>
+          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3 rounded">
+            Power Track
+          </Tab>
+          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3  rounded">
+            Bluetooth Smart Light (TUYA)
+          </Tab>
+          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3  rounded">
+            Smart Devices (TUYA)
+          </Tab>
+          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3  rounded">
+            Powerhub Pro
+          </Tab>
         </TabList>
+
         <TabPanel>
           <DisProduct />
         </TabPanel>

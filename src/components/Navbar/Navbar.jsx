@@ -10,7 +10,7 @@ const Navbar = () => {
   };
   return (
     <div className="container mx-auto">
-      <div className="navbar bg-base-100 py-[20px]">
+      <div className="navbar bg-base-100 py-[20px] w-full">
         <div className="navbar-start w-[10%]">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,24 +31,35 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[10] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Item 1</a>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+                <details>
+                  <summary>Products</summary>
+                  <ul className="w-[200px] z-10">
+                    <li>
+                      <NavLink to="/products/light">Light</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/products/tableLamp">Table Lamp</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/products/charget">Charget</NavLink>
+                    </li>
+                  </ul>
+                </details>
               </li>
               <li>
-                <a>Item 3</a>
+                <NavLink to="/aboutus">AboutUs</NavLink>
+              </li>
+              <li>
+                <NavLink to="/faqs">FAQS</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">Contact</NavLink>
               </li>
             </ul>
           </div>
@@ -56,7 +67,7 @@ const Navbar = () => {
             <img className="w-[50px] h-[50px]" src={logo} alt="" />
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex w-[50%]">
+        <div className="navbar-center hidden lg:flex w-[60%]">
           <ul className="menu menu-horizontal px-1 text-[18px]">
             <li>
               <NavLink to="/">Home</NavLink>
@@ -88,7 +99,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end w-[40%]">
+        <div className="navbar-end lg:w-[30%] flex justify-end items-center w-full">
           <div className="text-[30px] flex justify-between items-center gap-[20px]">
             <button>
               <CiSearch />
