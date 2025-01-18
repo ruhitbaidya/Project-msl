@@ -14,3 +14,75 @@
   transform: scale(1.1) rotate(2deg); /* Zoom in and slight rotation */
   filter: brightness(1.2) contrast(1.1); /* Enhance brightness and contrast */
 }
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 7px;
+  background: gray;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 50px;
+  height: 7px;
+  background: #ff5722;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Custom Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #ff8d28; /* Light background */
+  width: 60px; /* Button size */
+  height: 60px;
+  border-radius: 10px; /* Small radius for rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
+  cursor: pointer; /* Pointer cursor for active buttons */
+}
+
+/* Position the buttons */
+.swiper-button-next {
+  right: 10px; /* Position next button to the right */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Position previous button to the left */
+}
+
+/* Arrow icons inside the buttons */
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  color: #32251f; /* Icon color */
+  font-size: 24px; /* Icon size */
+}
+
+/* Active buttons with changed background */
+.swiper-button-next.swiper-button-active,
+.swiper-button-prev.swiper-button-active {
+  background-color: #ff5722; /* Active button background color */
+  color: #fff; /* White icon color */
+}
+
+/* Disabled buttons */
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  background-color: #e0e0e0; /* Grey background for disabled buttons */
+  color: #b0b0b0; /* Grey icon color */
+  cursor: not-allowed; /* Change cursor to not-allowed when button is disabled */
+}

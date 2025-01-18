@@ -1,9 +1,13 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { CiSearch, CiUser } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 import "./Nav.css";
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handelRedirct = () => {
+    navigate("/card");
+  };
   return (
     <div className="container mx-auto">
       <div className="navbar bg-base-100 py-[20px]">
@@ -89,9 +93,9 @@ const Navbar = () => {
             <button>
               <CiSearch />
             </button>
-            <button>
+            <button onClick={handelRedirct}>
               <div className="indicator">
-                <span className="indicator-item badge bg-[#ff8d28]"></span>
+                <span className="indicator-item badge bg-[#ff8d28]">0</span>
                 <div className="">
                   <MdOutlineShoppingCart />
                 </div>

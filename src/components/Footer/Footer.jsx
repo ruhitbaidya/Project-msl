@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 import { FaFacebook } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="my-[60px]" />
+      <hr className="my-[30px]" />
       <div>
         <p className="text-center text-[#32251F]">
           2025 all Right Reserved @BEALS
