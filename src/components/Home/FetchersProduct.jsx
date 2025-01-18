@@ -11,14 +11,13 @@ import pImg3 from "../../assets/p3.png";
 import pImg4 from "../../assets/p4.png";
 import Buttons from "../ReuserComponents/Buttons";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const FetchersProduct = () => {
+  const { t } = useTranslation();
   return (
     <div className="py-[50px]">
-      <TitleDesc
-        title="Featured Products"
-        description="Your one stop solution for electronics and lighting"
-      />
+      <TitleDesc title={t("fetcherPTitle")} description={t("fetcherPDesc")} />
 
       <div className="my-[30px]">
         <div className="relative">

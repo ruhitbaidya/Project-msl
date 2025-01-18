@@ -1,14 +1,16 @@
 import TitleDesc from "../ReuserComponents/TitleDesc";
 import img1 from "../../assets/mp1.png";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 const PopularProduct = () => {
+  const { t } = useTranslation();
   return (
     <div className="py-[50px] bg-[#F9F9F9]">
       <div className="container mx-auto px-[10px]">
         <div>
           <TitleDesc
-            title="Most Popular Products"
-            description="Your one stop solution for electronics and lighting"
+            title={t("popularPTitle")}
+            description={t("popularPDesc")}
           />
         </div>
         <div className="mt-[40px]">

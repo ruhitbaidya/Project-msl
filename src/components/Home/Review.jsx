@@ -7,14 +7,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./slider.css"; // Ensure this file includes the updated CSS
 import Purcess from "../ReuserComponents/Purcess";
+import { useTranslation } from "react-i18next";
 
 const Review = () => {
+  const { t } = useTranslation();
   return (
     <div className="py-[50px]">
       <div className="">
         <div>
           <h4 className="text-[#000000] text-[25px] lg:text-[44px] lg:w-[50%] mb-[20px]">
-            What our customers say about BEALS?
+            {t("reviewTitle")}
           </h4>
         </div>
         <div className="reviews">
@@ -39,9 +41,7 @@ const Review = () => {
               <div className="flex justify-between items-center gap-[25px]">
                 <div className="bg-[#32251F] text-white p-[45px] rounded-lg">
                   <p className="mb-[30px] text-[18px]">
-                    “Type c socket quality of the product I purchased. They may
-                    comment on how well the product works, how durable it is,
-                    and how it compares to similar products on the market.”
+                    “{t("reviewSlideDesc")}”
                   </p>
                   <div>
                     <div className="lg:flex justify-between items-center">
@@ -73,9 +73,7 @@ const Review = () => {
               <div className="flex justify-between items-center gap-[25px]">
                 <div className="bg-[#32251F] text-white p-[45px] rounded-lg">
                   <p className="mb-[30px] text-[18px]">
-                    “Type c socket quality of the product I purchased. They may
-                    comment on how well the product works, how durable it is,
-                    and how it compares to similar products on the market.”
+                    “{t("reviewSlideDesc")}”
                   </p>
                   <div>
                     <div className="lg:flex justify-between items-center">
@@ -107,9 +105,7 @@ const Review = () => {
               <div className="flex justify-between items-center gap-[25px]">
                 <div className="bg-[#32251F] text-white p-[45px] rounded-lg">
                   <p className="mb-[30px] text-[18px]">
-                    “Type c socket quality of the product I purchased. They may
-                    comment on how well the product works, how durable it is,
-                    and how it compares to similar products on the market.”
+                    “{t("reviewSlideDesc")}”
                   </p>
                   <div>
                     <div className="lg:flex justify-between items-center">

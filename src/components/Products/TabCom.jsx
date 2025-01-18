@@ -1,32 +1,44 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "./Tab.css";
 import DisProduct from "./DisProduct";
-
+import { RiMenuUnfold2Fill } from "react-icons/ri";
+import { useState } from "react";
 const TabCom = () => {
+  const [togle, setTogle] = useState(true);
   return (
     <div className="text-white">
       <Tabs>
-        <TabList className="flex flex-wrap justify-center items-center gap-[25px] sm:flex-row sm:gap-[25px] sm:w-auto w-full">
-          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3 hover:bg-gray-700 rounded">
-            All
-          </Tab>
-          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3  rounded">
-            Switch & Socket
-          </Tab>
-          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3 rounded">
-            Power Track
-          </Tab>
-          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3  rounded">
-            Bluetooth Smart Light (TUYA)
-          </Tab>
-          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3  rounded">
-            Smart Devices (TUYA)
-          </Tab>
-          <Tab className="text-center py-2 px-4 sm:px-6 sm:py-3  rounded">
-            Powerhub Pro
-          </Tab>
-        </TabList>
-
+        <div className="md:hidden lg:hidden text-center bg-[#ff8d28] py-[8px] flex justify-center items-center rounded-lg mb-[10px]">
+          <button onClick={() => setTogle(!togle)} className="text-[30px]">
+            <RiMenuUnfold2Fill />
+          </button>
+        </div>
+        <div
+          className={`${togle ? "hidden" : "flex"} flex md:hidden lg:hidden`}
+        >
+          <TabList className="flex flex-col md:flex-row justify-center items-center gap-[25px] w-full">
+            <Tab onClick={() => setTogle(!togle)}>All</Tab>
+            <Tab onClick={() => setTogle(!togle)}>Switch & Socket</Tab>
+            <Tab onClick={() => setTogle(!togle)}>Power Track</Tab>
+            <Tab onClick={() => setTogle(!togle)}>
+              Bluetooth Smart Light (TUYA)
+            </Tab>
+            <Tab onClick={() => setTogle(!togle)}>Smart Devices (TUYA)</Tab>
+            <Tab onClick={() => setTogle(!togle)}>Powerhub Pro</Tab>
+          </TabList>
+        </div>
+        <div className="hidden md:flex lg:flex">
+          <TabList className="flex flex-col md:flex-row justify-center items-center gap-[25px] w-full">
+            <Tab onClick={() => setTogle(!togle)}>All</Tab>
+            <Tab onClick={() => setTogle(!togle)}>Switch & Socket</Tab>
+            <Tab onClick={() => setTogle(!togle)}>Power Track</Tab>
+            <Tab onClick={() => setTogle(!togle)}>
+              Bluetooth Smart Light (TUYA)
+            </Tab>
+            <Tab onClick={() => setTogle(!togle)}>Smart Devices (TUYA)</Tab>
+            <Tab onClick={() => setTogle(!togle)}>Powerhub Pro</Tab>
+          </TabList>
+        </div>
         <TabPanel>
           <DisProduct />
         </TabPanel>

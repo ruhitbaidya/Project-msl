@@ -9,8 +9,10 @@ import light from "../../assets/image.png";
 import Buttons from "../ReuserComponents/Buttons";
 import charger from "../../assets/cnarger.png";
 import images2 from "../../assets/hero2.png";
+import { useTranslation } from "react-i18next";
 
 export const Banner = () => {
+  const { t } = useTranslation();
   return (
     <div className="">
       <Swiper
@@ -30,11 +32,10 @@ export const Banner = () => {
               <div className="flex justify-between items-center top-0 h-full px-[40px] absolute">
                 <div className="w-[60%]">
                   <h1 className="lg:text-[64px] text-[18px] text-white">
-                    Bandon Electronics and Lighting Store
+                    {t("bannerSliderhead")}
                   </h1>
                   <p className="text-[15px] hidden lg:flex lg:mt-[20px] lg:w-[60%] text-white">
-                    BEALS is tailored to the needs of your seeking high-quality
-                    electronics and lighting solutions.
+                    {t("bannerSlidertitle")}
                   </p>
                   <div className="lg:mt-[34px]">
                     <Buttons text="Bye Now" />
@@ -65,11 +66,10 @@ export const Banner = () => {
               <div className="flex justify-between items-center top-0 h-full px-[40px] absolute">
                 <div className="w-[60%]">
                   <h1 className="lg:text-[64px] text-[18px] text-black">
-                    We Promise <br /> Your Choice
+                    {t("bannerSliderhead1")}
                   </h1>
                   <p className="text-[15px] hidden lg:flex lg:mt-[20px] lg:w-[60%] text-black">
-                    BEALS is tailored to the needs of your seeking high-quality
-                    electronics and lighting solutions.
+                    {t("bannerSlidertitle1")}
                   </p>
                   <div className="lg:mt-[34px]">
                     <Buttons text="Bye Now" />
