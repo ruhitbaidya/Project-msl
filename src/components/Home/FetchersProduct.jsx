@@ -4,7 +4,7 @@ import "swiper/css/free-mode";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "./slider.css";
-import { FreeMode, Pagination, Navigation } from "swiper/modules";
+import { FreeMode, Pagination, Navigation, Autoplay } from "swiper/modules";
 import pImg1 from "../../assets/p1.png";
 import pImg2 from "../../assets/p2.png";
 import pImg3 from "../../assets/p3.png";
@@ -26,12 +26,17 @@ const FetchersProduct = () => {
             slidesPerView={4}
             spaceBetween={18}
             freeMode={true}
-            modules={[FreeMode, Pagination, Navigation]} // Added Navigation module
+            modules={[FreeMode, Pagination, Navigation, Autoplay]} // Added Navigation module
             className="mySwiper"
             navigation={{
               prevEl: ".swiper-button-prev", // Custom previous button
               nextEl: ".swiper-button-next", // Custom next button
             }}
+            autoplay={{
+              delay: 2500, // Adjust autoplay delay to 2.5 seconds
+              disableOnInteraction: false, // Allow autoplay to continue after interaction
+            }}
+            loop={true} // Enable loop for infinite carousel effect
           >
             <SwiperSlide>
               <div>

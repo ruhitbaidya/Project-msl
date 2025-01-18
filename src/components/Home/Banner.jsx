@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules"; // Import the Pagination module
+import { Pagination, Autoplay } from "swiper/modules"; // Import the Pagination module
 import "swiper/css";
 import "swiper/css/pagination"; // Import pagination styles
 import "./slider.css";
@@ -15,8 +15,13 @@ export const Banner = () => {
     <div className="">
       <Swiper
         className="mySwiper"
-        modules={[Pagination]} // Enable the Pagination module
+        modules={[Pagination, Autoplay]} // Enable the Pagination module
         pagination={{ clickable: true }} // Configure the pagination
+        autoplay={{
+          delay: 2500, // Adjust autoplay delay to 2.5 seconds
+          disableOnInteraction: false, // Allow autoplay to continue after interaction
+        }}
+        loop={true} // Enable loop for infinite carousel effect
       >
         <SwiperSlide>
           <div className="">
