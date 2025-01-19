@@ -9,6 +9,7 @@ import PageNotFound from "../pages/PageNotFound";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import Card from "../pages/Card";
+import ProductDetails from "../pages/ProductDetails";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: "/card",
         element: <Card />,
+      },
+      {
+        path: "/productDetails/:id",
+        element: <ProductDetails />,
       },
     ],
   },

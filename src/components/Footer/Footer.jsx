@@ -87,7 +87,7 @@ const Footer = () => {
                 placeholder="Enter Email"
                 type="text"
               />
-              <button className="bg-[#FF8D28] py-[16px] px-[22px] rounded-lg -ml-[10px]">
+              <button className="bg-[#FF8D28] py-[16px] px-[22px] rounded-lg -ml-[15px]">
                 <FaLongArrowAltRight />
               </button>
             </div>

@@ -42,7 +42,7 @@ export const Banner = () => {
                   </div>
                 </div>
                 <div className="w-[40%]">
-                  <div className="w-full flex-col justify-center items-center">
+                  <div className="w-full flex justify-center items-center">
                     <div className="relative">
                       <img className="object-contain" src={light} alt="light" />
                       <div className="absolute bottom-0 lg:-left-12">
@@ -76,7 +76,7 @@ export const Banner = () => {
                   </div>
                 </div>
                 <div className="w-[40%]">
-                  <div className="w-full flex-col justify-center items-center">
+                  <div className="w-full flex justify-center items-center">
                     <div className="relative">
                       <img
                         className="object-contain"

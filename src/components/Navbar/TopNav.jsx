@@ -8,7 +8,7 @@ const TopNav = () => {
     i18n.changeLanguage(value);
   };
   return (
-    <div className="bg-[#32251F]">
+    <div className="bg-[#32251F] py-[10px]">
       <div className="container mx-auto px-[10px]">
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-full sm:w-auto">

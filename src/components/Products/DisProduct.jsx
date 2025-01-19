@@ -12,7 +12,7 @@ const DisProduct = () => {
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full lg:h-[300px] object-contain"
+              className="w-full lg:h-[200px] object-contain"
               src={img1}
               alt=""
             />
@@ -24,7 +24,7 @@ const DisProduct = () => {
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full lg:h-[300px] object-contain"
+              className="w-full lg:h-[200px] object-contain"
               src={img2}
               alt=""
             />
@@ -36,7 +36,7 @@ const DisProduct = () => {
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full lg:h-[300px] object-contain"
+              className="w-full lg:h-[200px] object-contain"
               src={img3}
               alt=""
             />
@@ -48,7 +48,7 @@ const DisProduct = () => {
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full lg:h-[300px] object-contain"
+              className="w-full lg:h-[200px] object-contain"
               src={img4}
               alt=""
             />
@@ -60,7 +60,7 @@ const DisProduct = () => {
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full lg:h-[300px] object-contain"
+              className="w-full lg:h-[200px] object-contain"
               src={img5}
               alt=""
             />
@@ -72,7 +72,7 @@ const DisProduct = () => {
         <div>
           <div className="bg-[#F9F9F9] p-[40px] rounded-lg">
             <img
-              className="w-full lg:h-[300px] object-contain"
+              className="w-full lg:h-[200px] object-contain"
               src={img6}
               alt=""
             />
