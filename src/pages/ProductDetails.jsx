@@ -60,12 +60,12 @@ const ProductDetails = () => {
               </p>
             </div>
           </div>
-          <div className="lg:flex items-center gap-[16px] my-[30px]">
-            <button className="flex  justify-between items-center gap-[17px] border py-[12px]  mb-[5px] px-[34px] rounded-lg text-[18px] text-[#32251F] hover:bg-[#FF8D28] transition-all">
+          <div className="lg:flex md:flex items-center gap-[16px] my-[30px]">
+            <button className="flex justify-between items-center gap-[17px] border py-[12px] mb-[5px] px-[34px] rounded-lg text-[18px] text-[#32251F] hover:bg-[#FF8D28] transition-all w-full sm:w-auto">
               <span>Bye Now</span>
               <FaArrowRightLong />
             </button>
-            <button className="flex  justify-between items-center gap-[17px] border py-[12px] mb-[5px] px-[34px] rounded-lg text-[18px] text-[#32251F] hover:bg-[#FF8D28] transition-all">
+            <button className="flex justify-between items-center gap-[17px] border py-[12px] mb-[5px] px-[34px] rounded-lg text-[18px] text-[#32251F] hover:bg-[#FF8D28] transition-all w-full sm:w-auto">
               <span>Add to cart</span>
               <FaArrowRightLong />
             </button>
