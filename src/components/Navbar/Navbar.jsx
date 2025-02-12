@@ -1,135 +1,170 @@
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { CiSearch, CiUser } from "react-icons/ci";
-import { MdOutlineShoppingCart } from "react-icons/md";
+import { NavLink, useNavigate } from "react-router-dom";
+import { CiUser } from "react-icons/ci";
 import logo from "../../assets/logo.png";
+import { IoMenu } from "react-icons/io5";
+import { IoIosSearch } from "react-icons/io";
+import { CiShoppingCart } from "react-icons/ci";
 import "./Nav.css";
+import { useState } from "react";
+import { IoIosArrowForward } from "react-icons/io";
+import { RiCloseLargeLine } from "react-icons/ri";
 const Navbar = () => {
+  const [userTogle, setUserTogle] = useState(false);
+  const [menus, setMenus] = useState(false);
+  const [togleMenu, setTogleMenu] = useState(false);
   const navigate = useNavigate();
   const handelRedirct = () => {
     navigate("/card");
   };
   return (
-    <div className="container mx-auto">
-      <div className="navbar bg-base-100 py-[20px] w-full">
-        <div className="navbar-start w-[10%]">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[10] mt-3 w-full p-2 shadow"
-            >
+    <div>
+      <div className="container mx-auto py-[10px] border-b-2 mb-[10px] relative">
+        <div className="grid grid-cols-3 lg:grid-cols-8 items-center">
+          <div className="col-span-1">
+            <img src={logo} alt="" />
+          </div>
+          <div className="hidden lg:flex col-span-6">
+            <ul className="flex gap-[40px] text-[18px]">
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li>
-                <details>
-                  <summary>Products</summary>
-                  <ul className="w-full z-10 bg-base-100 rounded-box shadow">
-                    <li>
-                      <NavLink to="/products/light">Light</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/products/tableLamp">Table Lamp</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/products/charget">Charget</NavLink>
-                    </li>
-                  </ul>
-                </details>
+              <li className="relative">
+                <button
+                  className="flex justify-center items-center gap-[5px]"
+                  onClick={() => setTogleMenu(!togleMenu)}
+                >
+                  Products{" "}
+                  {togleMenu ? (
+                    <IoIosArrowForward />
+                  ) : (
+                    <IoIosArrowForward className="rotate-90" />
+                  )}
+                </button>
+                {togleMenu ? (
+                  <>
+                    <div className="bg-white shadow-lg absolute z-10 rounded-lg p-[20px] w-[250px]">
+                      <ul>
+                        <li onClick={() => setTogleMenu(!togleMenu)}>
+                          <NavLink to="products/adfadf">List 1</NavLink>
+                        </li>
+                      </ul>
+                    </div>
+                  </>
+                ) : (
+                  ""
+                )}
               </li>
               <li>
-                <NavLink to="/aboutus">AboutUs</NavLink>
+                <NavLink to="/aboutus">About us</NavLink>
               </li>
               <li>
-                <NavLink to="/faqs">FAQS</NavLink>
+                <NavLink to="/faqs">FAQs</NavLink>
               </li>
               <li>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/contact">Contacts</NavLink>
               </li>
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost text-xl">
-            <img className="w-[50px] h-[50px]" src={logo} alt="" />
-          </Link>
-        </div>
-        <div className="navbar-center hidden lg:flex w-[60%]">
-          <ul className="menu menu-horizontal px-1 text-[18px]">
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <details>
-                <summary>Products</summary>
-                <ul className="w-[200px] z-10">
-                  <li>
-                    <NavLink to="/products/light">Light</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/products/tableLamp">Table Lamp</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/products/charget">Charget</NavLink>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <NavLink to="/aboutus">AboutUs</NavLink>
-            </li>
-            <li>
-              <NavLink to="/faqs">FAQS</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
-          </ul>
-        </div>
-        <div className="navbar-end lg:w-[30%] flex justify-end items-center w-full">
-          <div className="text-[30px] flex justify-between items-center gap-[20px]">
-            <button>
-              <CiSearch />
-            </button>
-            <button onClick={handelRedirct}>
-              <div className="indicator">
-                <span className="indicator-item badge bg-[#ff8d28]">0</span>
-                <div className="">
-                  <MdOutlineShoppingCart />
-                </div>
+          <div className="col-span-1">
+            <div className="flex justify-between items-center">
+              <div>
+                <IoIosSearch size={30} />
               </div>
-            </button>
-            <button>
-              <div className="dropdown dropdown-end">
-                <div tabIndex={0} role="button" className="">
-                  <CiUser />
-                </div>
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content menu border-[#ff8d28] bg-base-100 rounded-box z-[10] mt-[10px] w-52 p-2 shadow text-[18px]"
+              <div>
+                <button onClick={() => handelRedirct()}>
+                  <CiShoppingCart size={30} />
+                </button>
+              </div>
+              <div className="relative">
+                <button
+                  onClick={() => {
+                    setUserTogle(!userTogle), setTogleMenu(false);
+                  }}
                 >
-                  <li className="hover:bg-[#ff8d28] users">
-                    <NavLink to="/register">Register User</NavLink>
-                  </li>
-                  <li className="hover:bg-[#ff8d28] users">
-                    <NavLink to="/login">Login User</NavLink>
-                  </li>
-                </ul>
+                  {" "}
+                  <CiUser size={30} />
+                </button>
+                {userTogle ? (
+                  <>
+                    <div className="absolute z-10 right-0 top-[100%] bg-[#32251F] text-white w-[200px] p-[20px] rounded-lg border border-[#FF8D28]">
+                      <p onClick={() => setUserTogle(!userTogle)}>
+                        <NavLink to="/login">Login</NavLink>
+                      </p>
+                      <p onClick={() => setUserTogle(!userTogle)}>
+                        <NavLink to="/register">Register</NavLink>
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  ""
+                )}
               </div>
+            </div>
+          </div>
+          <div className="flex justify-end lg:hidden col-span-1">
+            <button
+              onClick={() => setMenus(!menus)}
+              className="p-[10px] border"
+            >
+              <IoMenu size={30} />
             </button>
+            {menus ? (
+              <>
+                {" "}
+                <div className="absolute top-0 z-10 bg-white w-[100%] p-[20px]">
+                  <div className="text-right">
+                    <button
+                      onClick={() => setMenus(false)}
+                      className="text-gray-800"
+                    >
+                      <RiCloseLargeLine size={30} />
+                    </button>
+                  </div>
+                  <ul className=" text-[18px]">
+                    <li onClick={() => setMenus(!menus)}>
+                      <NavLink to="/">Home</NavLink>
+                    </li>
+                    <li className="relative">
+                      <button
+                        className="flex justify-center items-center gap-[5px]"
+                        onClick={() => setTogleMenu(!togleMenu)}
+                      >
+                        Products{" "}
+                        {togleMenu ? (
+                          <IoIosArrowForward />
+                        ) : (
+                          <IoIosArrowForward className="rotate-90" />
+                        )}
+                      </button>
+                      {togleMenu ? (
+                        <>
+                          <div className="bg-white rounded-lg p-[20px] w-[250px]">
+                            <ul>
+                              <li onClick={() => setTogleMenu(!togleMenu)}>
+                                <NavLink to="products/adfadf">List 1</NavLink>
+                              </li>
+                            </ul>
+                          </div>
+                        </>
+                      ) : (
+                        ""
+                      )}
+                    </li>
+                    <li onClick={() => setMenus(!menus)}>
+                      <NavLink to="/aboutus">About us</NavLink>
+                    </li>
+                    <li onClick={() => setMenus(!menus)}>
+                      <NavLink to="/faqs">FAQs</NavLink>
+                    </li>
+                    <li onClick={() => setMenus(!menus)}>
+                      <NavLink to="/contact">Contacts</NavLink>
+                    </li>
+                  </ul>
+                </div>
+              </>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

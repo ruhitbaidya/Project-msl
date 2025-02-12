@@ -1,6 +1,8 @@
 import { FaRegTrashAlt } from "react-icons/fa";
 // import ProductQuantities from "../onlytext";
-
+import { FaLongArrowAltRight } from "react-icons/fa";
+import Purcess from "../components/ReuserComponents/Purcess";
+import Choice from "../components/ReuserComponents/Choice";
 const Card = () => {
   const cardP = [
     {
@@ -33,59 +35,86 @@ const Card = () => {
         Check Your Product And And CheckOut
       </h3>
       <div className="mt-[20px]">
-        <div className="grid grid-cols-7">
-          <div className="col-span-5">
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Image</th>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th>Queantity</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                {cardP.map((item, index) => {
-                  return (
-                    <>
-                      <tr>
-                        <td>{index + 1}</td>
-                        <td>
+        <div className="w-[80%] mx-auto">
+          <div className="w-full">
+            <div className="overflow-x-auto">
+              <table className="table-fixed w-full min-w-[600px]">
+                <thead>
+                  <tr>
+                    <th className="p-3 w-1/3 text-left whitespace-nowrap">
+                      Product
+                    </th>
+                    <th className="p-3 w-1/3 text-center whitespace-nowrap">
+                      Quantity
+                    </th>
+                    <th className="p-3 w-1/3 text-right whitespace-nowrap">
+                      Total
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cardP.map((item, index) => (
+                    <tr key={index} className="border-t-2 border-gray-300">
+                      <td className="p-3 w-1/3">
+                        <div className="flex items-center gap-4">
                           <img
-                            className="object-contain w-[40px] h-[40px]"
+                            className="object-contain w-[60px] h-[60px]"
                             src={item.image}
-                            alt=""
+                            alt={item.name}
                           />
-                        </td>
-                        <td>{item.name}</td>
-
-                        <td>{item.price}</td>
-                        <td className="flex justify-center items-center">
-                          <button className="bg-[#D9D9D9] mx-[5px] w-[30px] block text-center h-[30px] rounded-full  text-[20px] disabled">
-                            {2}
-                          </button>
-                          <button className="bg-[#FF8D28] mx-[5px] w-[30px] block text-center h-[30px] rounded-full  text-[25px]">
+                          <div>
+                            <h4 className="font-medium">{item.name}</h4>
+                            <p className="text-sm text-gray-600">Push-button</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-3 w-1/3 text-center">
+                        <div className="flex justify-center items-center gap-2">
+                          <button className="w-[30px] h-[30px] rounded-full border text-lg leading-6 flex justify-center items-center">
                             +
                           </button>
-
-                          <button className="bg-[#FF8D28] mx-[5px] w-[30px] block text-center h-[30px] rounded-full  text-[25px]">
+                          <span className=" w-[30px] h-[30px] rounded-full border flex justify-center items-center">
+                            {2}
+                          </span>
+                          <button className=" w-[30px] h-[30px] rounded-full border text-lg leading-6 flex justify-center items-center">
                             -
                           </button>
-                        </td>
-                        <td>
-                          <FaRegTrashAlt />
-                        </td>
-                      </tr>
-                    </>
-                  );
-                })}
-              </tbody>
-            </table>
+                          <button className="text-gray-400 ml-4">
+                            <FaRegTrashAlt />
+                          </button>
+                        </div>
+                      </td>
+                      <td className="p-3 text-right text-gray-500 w-1/3">
+                        ${item.price}
+                      </td>
+                    </tr>
+                  ))}
+                  <tr className="border-t-2 border-gray-300">
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <div className="flex justify-end items-center gap-[40px] mt-[15px]">
+                        <span className="text-gray-400">Total</span>
+                        <span className="font-bold text-[#FF8D28]">$36</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div></div>
+          <div className="flex justify-end mt-[30px]">
+            <button className="flex justify-between items-center gap-[20px] px-[40px] py-[10px] bg-[#FF8D28] rounded-lg text-gray-800">
+              <span>CheckOut</span> <FaLongArrowAltRight size={20} />
+            </button>
+          </div>
         </div>
+      </div>
+      <div className="mt-[100px]">
+        <Purcess />
+      </div>
+      <div className="mt-[100px]">
+        <Choice />
       </div>
     </div>
   );
