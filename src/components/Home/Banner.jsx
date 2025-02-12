@@ -29,7 +29,7 @@ export const Banner = () => {
           <div className="">
             <div className="relative">
               <img className="w-full" src={img1} alt="" />
-              <div className="flex justify-between items-center top-0 h-full px-[40px] absolute">
+              <div className="flex justify-between items-center top-0 h-full px-[15px] lg:px-[40px] absolute">
                 <div className="w-[60%]">
                   <h1 className="lg:text-[64px] text-[18px] text-white">
                     {t("bannerSliderhead")}
@@ -63,7 +63,7 @@ export const Banner = () => {
           <div className="">
             <div className="relative">
               <img className="w-full" src={images2} alt="" />
-              <div className="flex justify-between items-center top-0 h-full px-[40px] absolute">
+              <div className="flex justify-between items-center top-0 h-full px-[15px] lg:px-[40px] absolute">
                 <div className="w-[60%]">
                   <h1 className="lg:text-[64px] text-[18px] text-black">
                     {t("bannerSliderhead1")}
