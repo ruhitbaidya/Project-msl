@@ -18,7 +18,7 @@ const Navbar = () => {
   };
   return (
     <div>
-      <div className="container mx-auto py-[10px] border-b-2 mb-[10px] relative">
+      <div className="container mx-auto py-[10px] border-b-2 mb-[10px] text-gray-600 relative dark:bg-white">
         <div className="grid grid-cols-3 lg:grid-cols-8 items-center">
           <div className="col-span-1">
             <img src={logo} alt="" />
@@ -101,7 +101,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-end lg:hidden col-span-1">
+          <div className="flex justify-end lg:hidden col-span-1 mr-[10px]">
             <button
               onClick={() => setMenus(!menus)}
               className="p-[10px] border"

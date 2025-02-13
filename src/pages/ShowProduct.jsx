@@ -9,8 +9,8 @@ const ShowProduct = () => {
     <div>
       <SetTitle title="Show Product" />
       <div className="container mx-auto px-[10px]">
-        <div className="lg:flex justify-center items-center p-[60px]">
-          <div className="lg:w-[50%] w-[100%]">
+        <div className="lg:flex justify-center items-center lg:p-[60px]">
+          <div className="lg:w-[50%] w-[100%] ">
             <h1 className="text-[30px] lg:text-[64px] text-[#32251F]">
               Explore our Products{" "}
             </h1>

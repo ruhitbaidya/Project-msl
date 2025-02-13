@@ -23,20 +23,20 @@ const Footer = () => {
                 We help you to find your essential products
               </p>
             </div>
-            <div className="flex items-center gap-[30px]">
+            <div className="flex items-center text-[#32251F] gap-[30px]">
               <Link to="/">
-                <p className="w-[50px] h-[50px] border flex justify-center items-center text-[30px] gap-[20px] rounded-full">
-                  <FaFacebook />
+                <p className="w-[50px] h-[50px] border border-[#32251F] flex justify-center items-center text-[30px] gap-[20px] rounded-full">
+                  <FaFacebook size={20} />
                 </p>
               </Link>
               <Link to="/">
-                <p className="w-[50px] h-[50px] border flex justify-center items-center text-[30px] gap-[20px] rounded-full">
-                  <BsInstagram />
+                <p className="w-[50px] h-[50px] border border-[#32251F] flex justify-center items-center text-[30px] gap-[20px] rounded-full">
+                  <BsInstagram size={20} />
                 </p>
               </Link>
               <Link to="/">
-                <p className="w-[50px] h-[50px] border flex justify-center items-center text-[30px] gap-[20px] rounded-full">
-                  <FaTwitter />
+                <p className="w-[50px] h-[50px] border border-[#32251F] flex justify-center items-center text-[30px] gap-[20px] rounded-full">
+                  <FaTwitter size={20} />
                 </p>
               </Link>
             </div>
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="my-[30px]" />
+      <hr className="pb-[30px]" />
       <div>
         <p className="text-center text-[#32251F]">
           2025 all Right Reserved @BEALS

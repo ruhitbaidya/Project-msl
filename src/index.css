@@ -6,7 +6,9 @@
 * {
   font-family: "Poppins", serif;
 }
-
+body {
+  background-color: #fff;
+}
 h1,
 h2,
 h3,
@@ -15,6 +17,7 @@ h5,
 h6 {
   font-family: "Poppins", serif;
   font-weight: 700;
+  color: #32251f;
 }
 
 p {
@@ -28,4 +31,7 @@ p {
 }
 li a:hover {
   background-color: transparent !important;
+}
+button {
+  color: #32251f;
 }
