@@ -8,7 +8,10 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaPinterest } from "react-icons/fa";
 import ReviewRoot from "../components/review/ReviewsRoot";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useParams } from "react-router-dom";
 const ProductDetails = () => {
+  const { id } = useParams();
+  console.log(id);
   return (
     <div className="container mx-auto px-[10px] mt-[30px]">
       <SetTitle title="Product Details" />

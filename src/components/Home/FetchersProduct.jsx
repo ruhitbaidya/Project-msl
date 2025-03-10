@@ -5,16 +5,29 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "./slider.css";
 import { FreeMode, Pagination, Navigation, Autoplay } from "swiper/modules";
-import pImg1 from "../../assets/p1.png";
-import pImg2 from "../../assets/p2.png";
-import pImg3 from "../../assets/p3.png";
-import pImg4 from "../../assets/p4.png";
 import Buttons from "../ReuserComponents/Buttons";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import { getApi } from "../../api/allApiCalling";
+import { rootApi } from "../../api/apiUrl";
+import { Link } from "react-router-dom";
 
 const FetchersProduct = () => {
   const { t } = useTranslation();
+  const [product, setProduct] = useState(null);
+  const foundApi = async () => {
+    const result = await getApi(`${rootApi}/get-product`);
+    if (result.data.length > 0) {
+      setProduct(result.data);
+    } else {
+      console.log("something went wrong");
+    }
+    console.log(product);
+  };
+  useEffect(() => {
+    foundApi();
+  }, []);
   return (
     <div className="py-[50px]">
       <TitleDesc title={t("fetcherPTitle")} description={t("fetcherPDesc")} />
@@ -42,120 +55,32 @@ const FetchersProduct = () => {
               1024: { slidesPerView: 4, spaceBetween: 18 }, // Desktop
             }}
           >
-            <SwiperSlide>
-              <div>
-                <div className="bg-[#D9D9D9] p-[15px] rounded-lg">
-                  <img
-                    className="w-full h-[250px] object-cover"
-                    src={pImg1}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <p className="mt-[20px] text-[#32251F] text-[20px]">
-                    Silver open socket
-                  </p>
-                  <p className="mt-[10px] text-[18px] text-[#1E1E1E80]">
-                    $250.00
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="bg-[#D9D9D9] p-[15px] rounded-lg">
-                  <img
-                    className="w-full h-[250px] object-cover"
-                    src={pImg2}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <p className="mt-[20px] text-[#32251F] text-[20px]">
-                    Silver open socket
-                  </p>
-                  <p className="mt-[10px] text-[18px] text-[#1E1E1E80]">
-                    $250.00
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="bg-[#D9D9D9] p-[15px] rounded-lg">
-                  <img
-                    className="w-full h-[250px] object-cover"
-                    src={pImg3}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <p className="mt-[20px] text-[#32251F] text-[20px]">
-                    Silver open socket
-                  </p>
-                  <p className="mt-[10px] text-[18px] text-[#1E1E1E80]">
-                    $250.00
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="bg-[#D9D9D9] p-[15px] rounded-lg">
-                  <img
-                    className="w-full h-[250px] object-cover"
-                    src={pImg4}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <p className="mt-[20px] text-[#32251F] text-[20px]">
-                    Silver open socket
-                  </p>
-                  <p className="mt-[10px] text-[18px] text-[#1E1E1E80]">
-                    $250.00
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="bg-[#D9D9D9] p-[15px] rounded-lg">
-                  <img
-                    className="w-full h-[250px] object-cover"
-                    src={pImg1}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <p className="mt-[20px] text-[#32251F] text-[20px]">
-                    Silver open socket
-                  </p>
-                  <p className="mt-[10px] text-[18px] text-[#1E1E1E80]">
-                    $250.00
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div>
-                <div className="bg-[#D9D9D9] p-[15px] rounded-lg">
-                  <img
-                    className="w-full h-[250px] object-cover"
-                    src={pImg1}
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <p className="mt-[20px] text-[#32251F] text-[20px]">
-                    Silver open socket
-                  </p>
-                  <p className="mt-[10px] text-[18px] text-[#1E1E1E80]">
-                    $250.00
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
+            {product &&
+              product?.slice(0, 9).map((item) => (
+                <>
+                  <SwiperSlide key={item._id}>
+                    <Link to={`/productDetails/${item._id}`}>
+                      <div>
+                        <div className="bg-[#D9D9D9] p-[15px] rounded-lg">
+                          <img
+                            className="w-full h-[250px] object-cover"
+                            src={item.image}
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <p className="mt-[20px] text-[#32251F] text-[20px]">
+                            {item.name}
+                          </p>
+                          <p className="mt-[10px] text-[18px] text-[#1E1E1E80]">
+                            ${item.price}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                </>
+              ))}
           </Swiper>
 
           {/* Custom Navigation Buttons */}
