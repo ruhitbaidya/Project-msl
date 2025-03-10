@@ -32,7 +32,7 @@ const Login = () => {
               </div>
               <p className="my-[20px]"> Welcome Back!</p>
               <div>
-                <h2 className="text-[25px] lg:text-[44px]">Login With</h2>
+                <h2 className="text-[25px] lg:text-[44px] text-white">Login With</h2>
                 <div className="my-[20px]">
                   <button className="p-[10px] rounded-lg bg-[#C5331E] mx-[5px]">
                     <FaGoogle size={25} />

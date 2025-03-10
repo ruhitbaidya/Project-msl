@@ -30,7 +30,7 @@ const Register = () => {
             </div>
             <p className="my-[20px]"> Hello!</p>
             <div>
-              <h2 className="text-[25px] lg:text-[44px]">
+              <h2 className="text-[25px] lg:text-[44px] text-white">
                 Create An Account With
               </h2>
               <div className="my-[20px]">
@@ -47,6 +47,14 @@ const Register = () => {
               or
               <div>
                 <form className="my-[20px] space-y-[20px]">
+                  <div>
+                    <label htmlFor="email">Enter Name</label>
+                    <input
+                      className="w-full p-[15px] rounded-lg bg-transparent border focus:outline-none"
+                      type="Name"
+                      placeholder="Enter Name"
+                    />
+                  </div>
                   <div>
                     <label htmlFor="email">Enter Email Adderse</label>
                     <input

@@ -21,7 +21,7 @@ const TopNav = () => {
           </div>
           <div className="text-white w-full sm:w-auto text-center sm:text-right">
             <button
-              className={`mr-[5px] ${chan === "en" ? "text-[#FF8D28]" : ""}`}
+              className={`mr-[5px] ${chan === "en" ? "text-[#FF8D28]" : "text-white"}`}
               onClick={() => {
                 changeLanguare("en"), setChan("en");
               }}
@@ -30,7 +30,7 @@ const TopNav = () => {
             </button>{" "}
             l{" "}
             <button
-              className={`ml-[5px] ${chan === "bn" ? "text-[#FF8D28]" : ""}`}
+              className={`ml-[5px] ${chan === "bn" ? "text-[#FF8D28]" : "text-white"}`}
               onClick={() => {
                 changeLanguare("bn"), setChan("bn");
               }}
