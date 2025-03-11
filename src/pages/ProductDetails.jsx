@@ -9,9 +9,30 @@ import { FaPinterest } from "react-icons/fa";
 import ReviewRoot from "../components/review/ReviewsRoot";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { getApi } from './../api/allApiCalling';
+import { useEffect } from "react";
+import { rootApi } from './../api/apiUrl';
 const ProductDetails = () => {
+  const [loading, setLoading] = useState(true)
+  const [product, setProduct] = useState(null);
   const { id } = useParams();
-  console.log(id);
+
+  const getSingalproduct = async()=>{
+    setLoading(true)
+    getApi(`${rootApi}/get-singal-product/${id}`)
+    .then((res)=> {
+      if(res.data){
+        setProduct(res.data)
+        setLoading(false)
+      }
+    })
+    .catch((err)=>console.log(err))
+  }
+  useEffect(()=>{
+    setLoading(true)
+     getSingalproduct()
+  }, [id])
   return (
     <div className="container mx-auto px-[10px] mt-[30px]">
       <SetTitle title="Product Details" />
@@ -19,8 +40,11 @@ const ProductDetails = () => {
         <div>
           <img className="lg:h-[500px] w-full" src={image} alt="" />
         </div>
+        {
+          loading ? <p>Loading.....</p> : ""
+        }
         <div>
-          <h4 className="text-[44px]">Smart Switch</h4>
+          <h4 className="text-[44px]">{product.name}</h4>
           <p className="py-[20px] text-[24px] text-[#FF8D28] font-[500]">
             $166.00
           </p>
